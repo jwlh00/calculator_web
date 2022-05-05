@@ -1,5 +1,17 @@
-body{
-    background-color: black;
-    color: white;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    display: flex;
+    background-image: url("https://images5.alphacoders.com/729/thumb-1920-729900.jpg");
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    
+    
+}

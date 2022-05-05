@@ -20,7 +20,7 @@
     "rules": {
         "react/jsx-filename-extension": [0],
         "import/extensions": "off",
-        "max-classes-per-file": ["error", 2],
+        "semi": 0,
         "linebreak-style": 0
     }
 }

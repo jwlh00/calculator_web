@@ -1,0 +1,114 @@
+/*!**********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/Calculator.css ***!
+  \**********************************************************************/
+.mainContainer {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(141, 4, 168, 0.37);
+    backdrop-filter: blur(8.5px);
+    border-radius: 10px;
+}
+
+.calcContainer{
+    width: 400px;
+    border-radius: 16px;
+}
+.row {
+    display: flex;
+}
+
+
+
+/* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-user-drag: none;
+    -webkit-app-reigon: none;
+    -webkit-user-select: none;  
+}
+
+.container {
+    align-items: center;
+    flex-direction: column;
+    height: 80vh;
+    width: 30vw;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(141, 4, 168, 0.37);
+    backdrop-filter: blur(8.5px);
+    border-radius: 10px;
+    display: grid;
+    place-content: center;
+    font-size: 5rem;
+    padding: 1rem;
+}
+
+*/
+/*!******************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/Button.css ***!
+  \******************************************************************/
+.buttonContainer {
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(109, 19, 145, 0.37);
+    backdrop-filter: blur(8.5px);
+    color: white;
+    flex: 1;
+    margin: 4px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.buttonContainer:active {
+    background-color: lightskyblue;
+}
+/*!********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/Inputbar.css ***!
+  \********************************************************************/
+.inputContainer {
+    height: 10em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.inputSpace {
+    flex: 1;
+    font-size: 20px;
+}
+
+.result {
+    flex: 1;
+    font-size: 25px;
+    margin-top: 30px;
+}
+/*!*****************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/index.css ***!
+  \*****************************************************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    background-image: url("https://images5.alphacoders.com/729/thumb-1920-729900.jpg");
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    
+    
+}
