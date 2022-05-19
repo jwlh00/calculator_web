@@ -6,7 +6,7 @@ export default function Button({ input, result }) {
   return (
     <div className="inputContainer">
       <div className="inputSpace">
-        <h3>{ input }</h3>
+        <h3 data-testid="input_test">{ input }</h3>
       </div>
 
       <div className="resultSpace">

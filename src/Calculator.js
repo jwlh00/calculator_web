@@ -1,76 +1,22 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
 import * as math from 'mathjs'
 import './Calculator.css'
+import { functions } from './functions'
 
 import Button from './Button.js'
 import Inputbar from './Inputbar.js'
 
 export default function Appstart() {
-  const [input, setInput] = useState('')
-  const [result, setResult] = useState('')
-  const [waiting, setWaiting] = useState('')
-
-  const acFunc = () => {
-    setInput('')
-    setResult('')
-    setWaiting('')
-  }
-
-  const inputFunc = (e) => {
-    const lengthCheck = input.length
-    if (lengthCheck < 9) {
-      if (e === '%') {
-        setInput(() => [...input, `${e}`])
-        setWaiting(() => [...waiting, `${e}`])
-      } else if (input[0] === '0' && e === '0' && input.length === 1) {
-        console.log('0')
-      } else {
-        setInput(() => [...input, `${e}`])
-        setWaiting(() => [...waiting, `${e}`])
-      }
-    }
-  }
-
-  const operationFunc = (e) => {
-    setInput('')
-    setWaiting(() => [...waiting, `${e}`])
-  }
-
-  const equalsFunc = () => {
-    const value = waiting.join('').replace(',', '')
-    const final = value.replace(',', '')
-    const evaluatedResult = math.evaluate(final)
-    if (evaluatedResult > 999999999) {
-      setResult('ERROR')
-      setInput('')
-      setWaiting('')
-    } else if (evaluatedResult.toString().length > 9) {
-      const size = 9
-      const trimmed = evaluatedResult.toString().substring(0, size)
-      setResult(trimmed)
-      setInput('')
-      setWaiting('')
-    } else {
-      setResult(evaluatedResult)
-      setInput('')
-      setWaiting('')
-    }
-  }
-
-  const plusMinusFunc = (e) => {
-    if (input[0] === '-') {
-      console.log(input[0])
-    } else {
-      setInput(() => [...`${e}`, input])
-      setWaiting(() => [e + waiting])
-    }
-  }
+  const {
+    input, result, waiting, acFunc, inputFunc, operationFunc, equalsFunc, plusMinusFunc,
+  } = functions()
 
   return (
     <div className="mainContainer">
       <div className="calcContainer">
         <Inputbar input={input} result={result} />
-        <div className="row">
+        <div className="row" data-testid="row-test">
           <Button symbol="AC" symbolValue="filler" design="red" clicked={acFunc} />
           <Button symbol="%" symbolValue="%" design="darkgreen" clicked={operationFunc} />
           <Button symbol="+/-" symbolValue="-" design="darkgreen" clicked={plusMinusFunc} />
